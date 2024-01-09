@@ -1,0 +1,11 @@
+Feature: Bing Search with Content Category Filtering
+
+Scenario: Search and filter "Prowly Media Monitoring" by all categories
+
+Given user is on bing.com homepage
+When user enters the phrase "Prowly Media Monitoring" into the search bar and clicks 'enter'
+Then user is redirected to search results page
+And "All" category for content filtering is selected as default
+Then search results should include links, images, videos, etc.
+And each result should be categorized correctly
+
