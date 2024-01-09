@@ -1,5 +1,6 @@
 Feature: Bing Search with Content Category Filtering
 
+
 Scenario: Search and filter "Prowly Media Monitoring" by all categories
 
 Given user is on bing.com homepage
@@ -18,3 +19,13 @@ Then user is redirected to search results page
 And "All" category for content filtering is selected as default
 Then user selects the "Videos" category for content filtering
 And search results should include video links related to "Prowly Media Monitoring"
+
+
+Scenario: Search and filter "Prowly Media Monitoring" by news category
+
+Given user is on the bing.com homepage
+When user enters the phrase "Prowly Media Monitoring" into the search bar and clicks 'enter'
+Then user is redirected to search results page
+And "All" category for content filtering is selected as default
+Then user selects "News" category for content filtering
+And search results should include news articles related to "Prowly Media Monitoring"
