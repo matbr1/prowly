@@ -9,3 +9,12 @@ And "All" category for content filtering is selected as default
 Then search results should include links, images, videos, etc.
 And each result should be categorized correctly
 
+
+Scenario: Search and filter "Prowly Media Monitoring" by video category
+
+Given user is on the bing.com homepage
+When user enters the phrase "Prowly Media Monitoring" into the search bar and clicks 'enter'
+Then user is redirected to search results page
+And "All" category for content filtering is selected as default
+Then user selects the "Videos" category for content filtering
+And search results should include video links related to "Prowly Media Monitoring"
