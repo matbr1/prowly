@@ -1,0 +1,11 @@
+Feature: Bing Copilot for Information Gathering
+
+
+Scenario: Use copilot to gather general information about Prowly's media monitoring module - More balanced mode
+
+Given user is on the bing.com homepage
+When user activates the copilot feature by clicking on "Bing" icon at the right side of search bar
+Then user is redirected to copilot chat - "More balanced" mode should be selected as default 
+And user asks copilot to find information about the media monitoring module in Prowly
+Then copilot should provide general information about Prowly's media monitoring features
+And user can see "Learn more" sections with links to Prowly's page
